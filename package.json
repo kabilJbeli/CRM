@@ -1,0 +1,29 @@
+{
+  "name": "crm",
+  "version": "1.0.0",
+  "description": "school project that consist on developing a crm using Node JS and React JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kabilJbeli/CRM.git"
+  },
+  "keywords": [
+    "CRM",
+    "React",
+    "Redux",
+    "Node",
+    "JS"
+  ],
+  "author": "Kabil Jbeli",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kabilJbeli/CRM/issues"
+  },
+  "homepage": "https://github.com/kabilJbeli/CRM#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
