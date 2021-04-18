@@ -1,7 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="21f4fbbd-7202-4c44-8596-a08c8f8a340d" name="Default Changelist" comment="" />
+    <list default="true" id="21f4fbbd-7202-4c44-8596-a08c8f8a340d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/crm-frontend/src/actions/CompanyActions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-frontend/src/containers/company/AddCompany.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-frontend/src/containers/company/CompanyList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-frontend/src/containers/company/ModifyCompany.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-frontend/src/containers/dashboard/Dashboard.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-frontend/src/reducers/AddCompanyReducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-frontend/src/reducers/CompanyListReducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-frontend/src/reducers/RootReducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-frontend/src/store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/CRM.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-backend/config/security.js" beforeDir="false" afterPath="$PROJECT_DIR$/crm-backend/config/security.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-frontend" beforeDir="false" afterPath="$PROJECT_DIR$/crm-frontend" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/crm-frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/crm-frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-frontend/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/crm-frontend/src/App.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/crm-frontend/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-frontend/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/crm-frontend/src/index.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,7 +54,17 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/crm-frontend" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
   <component name="ProjectId" id="1rCtW8sa24ZZEBqEilXt1enWWti" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -29,7 +79,14 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2020.2.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\kabil\Desktop\CRM\crm-frontend\src\containers\company" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -41,20 +98,49 @@
       <updated>1618491942003</updated>
       <workItem from="1618491945250" duration="6438000" />
       <workItem from="1618675839614" duration="7075000" />
+      <workItem from="1618683996591" duration="3265000" />
+      <workItem from="1618743636012" duration="19720000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
-    <state width="498" height="446" key="SwitcherDM" timestamp="1618682593524">
+    <state x="395" y="111" key="#Inspections" timestamp="1618744259645">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="498" height="446" key="SwitcherDM/0.0.1536.864@0.0.1536.864" timestamp="1618682593524" />
+    <state x="395" y="111" key="#Inspections/0.0.1536.864@0.0.1536.864" timestamp="1618744259645" />
+    <state x="531" y="234" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1618753851406">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="531" y="234" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.864@0.0.1536.864" timestamp="1618753851406" />
+    <state x="277" y="77" key="SettingsEditor" timestamp="1618745652569">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="277" y="77" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1618745652569" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1618758066084">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="498" height="446" key="SwitcherDM/0.0.1536.864@0.0.1536.864" timestamp="1618758066084" />
     <state x="425" y="197" key="run.anything.popup" timestamp="1618680415203">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="425" y="197" key="run.anything.popup/0.0.1536.864@0.0.1536.864" timestamp="1618680415203" />
+    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1618753700099">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1618753700099" />
   </component>
 </project>
