@@ -1,0 +1,42 @@
+@import "~bootstrap/scss/bootstrap";
+
+body{
+  margin: 0;
+  padding: 0;
+  .App {
+    .dropdown-menu {
+      display:none !important;
+      &.show{
+        display:flex !important;
+  }
+
+    }
+    nav{
+      .mr-auto.navbar-nav {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 15px;
+      }
+      display: flex;
+      justify-content: space-around;
+      height: 50px;
+      align-items: center;
+      background-color: #0c8da0;
+      margin-bottom: 15px;
+      .dropdown-menu{
+        display:flex;
+        flex-direction:column;
+      }
+      a{
+        //color: #ffffff;
+        text-decoration: none;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+
