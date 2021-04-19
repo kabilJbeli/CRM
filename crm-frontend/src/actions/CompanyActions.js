@@ -1,4 +1,5 @@
 import axios from "axios";
+import React from 'react';
 export const GetCompaniesList = () => async dispatch =>{
 try{
     dispatch({
@@ -24,6 +25,8 @@ try{
 }
 
 export const AddNewCompany = (company) => async dispatch =>{
+
+    console.log('mldfmj');
     try{
         dispatch({
             type:'INVOKING_COMPANY_ADD_SERVICE'

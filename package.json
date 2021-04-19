@@ -3,7 +3,12 @@
   "version": "1.0.0",
   "description": "school project that consist on developing a crm using Node JS and React JS",
   "main": "index.js",
+  "proxy": "http://localhost:8080",
   "scripts": {
+    "start":  "concurrently \"npm run server\" \"npm run client\"",
+    "client": "cd crm-frontend && npm start",
+    "server": "cd crm-backend && nodemon app.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -25,5 +30,8 @@
   "homepage": "https://github.com/kabilJbeli/CRM#readme",
   "dependencies": {
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "concurrently": "^6.0.2"
   }
 }
