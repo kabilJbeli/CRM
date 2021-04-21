@@ -1,5 +1,6 @@
 import axios from "axios";
 import React from 'react';
+import http from 'http';
 export const GetCompaniesList = () => async dispatch =>{
 try{
     dispatch({
@@ -25,13 +26,13 @@ try{
 }
 
 export const AddNewCompany = (company) => async dispatch =>{
-
-    console.log('mldfmj');
     try{
         dispatch({
             type:'INVOKING_COMPANY_ADD_SERVICE'
         })
-       const res= axios.post('http://localhost:1337/company',company).then(res=>res);
+       const res= axios.post('http://localhost:1337/company',company).then(res=>{
+           console.log('res=',res);
+           return res;});
         dispatch({
             type:'COMPANIES_ADDED_SUCCESSFULLY',
             payload:res.data}

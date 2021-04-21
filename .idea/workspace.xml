@@ -20,12 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="21f4fbbd-7202-4c44-8596-a08c8f8a340d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-frontend/src/services/companyService.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-frontend/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/crm-frontend/src/App.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crm-frontend/src/actions/CompanyActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/crm-frontend/src/actions/CompanyActions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crm-frontend/src/containers/company/AddCompany.js" beforeDir="false" afterPath="$PROJECT_DIR$/crm-frontend/src/containers/company/AddCompany.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-frontend/src/containers/company/CompanyList.js" beforeDir="false" afterPath="$PROJECT_DIR$/crm-frontend/src/containers/company/CompanyList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-frontend/src/reducers/CompanyListReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/crm-frontend/src/reducers/CompanyListReducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,6 +87,7 @@
       <workItem from="1618683996591" duration="3265000" />
       <workItem from="1618743636012" duration="20318000" />
       <workItem from="1618866382791" duration="4056000" />
+      <workItem from="1618948855011" duration="5055000" />
     </task>
     <servers />
   </component>

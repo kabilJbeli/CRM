@@ -4,7 +4,6 @@ const defaultState = {
     errorMsg:''
 }
 const CompanyListReducer = (state = defaultState, action) => {
-    console.log('payload',action.payload);
     switch (action.type) {
         case 'COMPANIES_LIST_LOADING':
             return {
