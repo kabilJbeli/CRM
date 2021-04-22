@@ -1,20 +1,24 @@
 import React, {useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import _ from "lodash";
-import {GetCompaniesList} from "../../actions/CompanyActions";
 import {DataTable} from 'primereact/datatable';
 import {Column} from 'primereact/column';
 import "primereact/resources/primereact.css";
 import { Button } from 'primereact/button';
 import 'primeflex/primeflex.css';
+import {GetContactsList} from "../../actions/ContactActions";
+import {GetCompaniesList} from "../../actions/CompanyActions";
 
-const CompanyList = () => {
+const ContactList = () => {
+    const [contacts, setContacts] = useState([]);
     const dispatch = useDispatch();
-    const companiesList = useSelector(state => state.CompanyList);
+    const contactsList = useSelector(state => state.ContactList);
     React.useEffect(() => {
-        fetchData()
+        fetchData();
+        setContacts(contactsList);
     }, []);
     const fetchData = () => {
+        dispatch(GetContactsList());
         dispatch(GetCompaniesList());
     }
     const actionsBodyTemplate = (rowData) => {
@@ -31,24 +35,27 @@ const CompanyList = () => {
 
     }
     const showData = () => {
-        if (!_.isEmpty(companiesList.data)) {
-            return (<div className="container-fluid datatable-responsive-demo ">
-                <DataTable  header="Companies List" resizableColumns columnResizeMode="fit" value={companiesList.data} className="p-datatable-striped p-datatable-gridlines p-datatable-responsive-demo">
+        if (!_.isEmpty(contactsList.data) || _.isEmpty(contactsList.data)) {
+            return (<div className="container-fluid datatable-responsive-demo " >
+                <DataTable resizableColumns  columnResizeMode="fit" value={contactsList.data} className="p-datatable-striped p-datatable-gridlines p-datatable-responsive-demo">
                     <Column field="id" header="ID" sortable></Column>
-                    <Column field="name" header="Name" sortable></Column>
-                    <Column field="country" header="Country" sortable></Column>
-                    <Column field="adress" header="Adress" sortable></Column>
+                    <Column field="firstName" header="First Name" sortable></Column>
+                    <Column field="lastName" header="Last Name" sortable></Column>
+                    <Column field="email" header="Email" sortable></Column>
+                    <Column field="phone" header="Phone" sortable></Column>
+                    <Column field="companyID.name" header="Company" sortable></Column>
                     <Column header="Action" body={actionsBodyTemplate}></Column>
                 </DataTable>
             </div>)
         }
 
-        if (companiesList.loading) {
+        if (contactsList.loading) {
             return <p>Still Loading</p>
         }
-        if (companiesList.errorMsg !== '') {
-            return <p>{companiesList.errorMsg}</p>
+        if (contactsList.errorMsg !== '') {
+            return <p>{contactsList.errorMsg}</p>
         }
+
         return <p>Unable to get Data</p>
     }
     return (
@@ -57,4 +64,4 @@ const CompanyList = () => {
         </div>
     )
 }
-export default CompanyList;
+export default ContactList;

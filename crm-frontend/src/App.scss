@@ -4,6 +4,20 @@ body{
   margin: 0;
   padding: 0;
   .App {
+    .menuToggleBtn,.menuToggleBtn:hover,.menuToggleBtn:focus{
+      z-index: 999999999;
+      background: transparent;
+      border:none;
+      outline:none;
+      box-shadow: none;
+    }
+
+    button.p-sidebar-close.p-sidebar-icon.p-link {
+      display: none;
+    }
+    .container-fluid {
+      padding: 50px;
+    }
     .dropdown-menu {
       display:none !important;
       &.show{
@@ -36,12 +50,97 @@ body{
         }
       }
     }
+    .p-datatable {
+      .p-paginator {
+        background: transparent;
+        color: #000;
+        border: none !important;
+
+        button {
+          span {
+            color: #000 !important;
+          }
+        }
+      }
+    }
     .p-datatable-wrapper {
+
+      display: flex;
+      justify-content: center;
       table {
         width: 100%;
+        thead{
+
+          tr{
+            th{
+              padding: .5em;
+            }
+          }
+        }
+        tbody{
+          tr{
+            td{
+              padding: .5em;
+            }
+          }
+          tr:nth-child(odd){
+            color: #000;
+          }
+          tr:nth-child(even){
+            color: #000;
+          }
+        }
       }
+
+    }
+
+    .p-sidebar.p-component.p-sidebar-left{
+      position: relative;
+      float: left;
+      height: 100vh;
+      top: -15px !important;
+      transition-duration: 500ms;
+      transition-timing-function: ease-in-out;
+    }
+    .p-sidebar.p-component.p-sidebar-left.p-sidebar-active{
+      position: relative;
+      float: left;
+      width: 15rem;
+      height: 100vh;
+      top: -15px;
     }
   }
 }
 
 
+.datatable-responsive-demo .p-datatable-responsive-demo .p-datatable-tbody > tr > td .p-column-title {
+  display: none;
+}
+
+@media screen and (max-width: 40em) {
+  .datatable-responsive-demo .p-datatable.p-datatable-responsive-demo .p-datatable-thead > tr > th,
+  .datatable-responsive-demo .p-datatable.p-datatable-responsive-demo .p-datatable-tfoot > tr > td {
+    display: none !important;
+  }
+
+  .datatable-responsive-demo .p-datatable.p-datatable-responsive-demo .p-datatable-tbody > tr > td {
+    text-align: left;
+    display: block;
+    width: 100%;
+    float: left;
+    clear: left;
+    border: 0 none;
+  }
+
+  .datatable-responsive-demo .p-datatable.p-datatable-responsive-demo .p-datatable-tbody > tr > td .p-column-title {
+    padding: .4rem;
+    min-width: 30%;
+    display: inline-block;
+    margin: -.4em 1em -.4em -.4rem;
+    font-weight: bold;
+  }
+
+  .datatable-responsive-demo .p-datatable.p-datatable-responsive-demo .p-datatable-tbody > tr > td:last-child {
+    border-bottom: 1px solid var(--surface-d);
+  }
+}

@@ -3,19 +3,21 @@ import {InputText} from "primereact/inputtext";
 import {InputTextarea} from "primereact/inputtextarea";
 import {Button} from "primereact/button";
 import {useDispatch, useSelector} from "react-redux";
-import {AddNewCompany} from "../../actions/CompanyActions";
 
 const AddCompany = (props) => {
     const dispatch = useDispatch();
-    const [state,setState] = useState({company: {
-            name:null,
-            country: null,
-            adress:null,
-            zipcode: null
+    const [state, setState] = useState({
+        company: {
+            name: '',
+            country: '',
+            adress: '',
+            zipcode: ''
+        }
+    });
 
-        }});
-    const InvokeSetState =(company) => {
-     setState(company)}
+    const InvokeSetState = (company) => {
+        setState(company)
+    }
     const handleNameChanged = (event) => {
         // Extract the current value of the customer from state
         let company = state.company;
@@ -120,6 +122,8 @@ const AddCompany = (props) => {
     };
 
     return (
+        <div className="container-fluid">
+
         <div className="p-fluid p-formgrid p-grid">
             <div className="p-field p-col-12 p-md-6">
                 <label htmlFor="name">Company Name</label>
@@ -142,8 +146,10 @@ const AddCompany = (props) => {
                            value={state.company.zipcode}/>
             </div>
             <div className="p-field p-col-12 p-md-12">
-                <Button label="Save" onClick={addCompany.bind(this)} disabled={!state.company.zipcode || !state.company.name || !state.company.country || !state.company.adress}/>
+                <Button label="Save" onClick={addCompany.bind(this)}
+                        disabled={!state.company.zipcode || !state.company.name || !state.company.country || !state.company.adress}/>
             </div>
+        </div>
         </div>
     )
 }

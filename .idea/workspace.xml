@@ -20,13 +20,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="21f4fbbd-7202-4c44-8596-a08c8f8a340d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/crm-frontend/src/services/companyService.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-frontend/src/actions/ContactActions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-frontend/src/containers/contact/AddContact.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-frontend/src/containers/contact/ContactList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-frontend/src/containers/contact/ModifyContact.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-frontend/src/containers/item/AddItem.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-frontend/src/containers/item/ItemList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-frontend/src/containers/item/ModifyItem.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-frontend/src/reducers/ContactListReducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-backend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/crm-backend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/crm-frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/crm-frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/crm-frontend/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crm-frontend/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/crm-frontend/src/App.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-frontend/src/actions/CompanyActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/crm-frontend/src/actions/CompanyActions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crm-frontend/src/containers/company/AddCompany.js" beforeDir="false" afterPath="$PROJECT_DIR$/crm-frontend/src/containers/company/AddCompany.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crm-frontend/src/containers/company/CompanyList.js" beforeDir="false" afterPath="$PROJECT_DIR$/crm-frontend/src/containers/company/CompanyList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-frontend/src/reducers/CompanyListReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/crm-frontend/src/reducers/CompanyListReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-frontend/src/containers/dashboard/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/crm-frontend/src/containers/dashboard/Dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-frontend/src/reducers/RootReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/crm-frontend/src/reducers/RootReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +79,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
-    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2020.2.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="ts.external.directory.path" value="C:\Users\kjbeli\AppData\Local\JetBrains\WebStorm 2020.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -88,6 +101,8 @@
       <workItem from="1618743636012" duration="20318000" />
       <workItem from="1618866382791" duration="4056000" />
       <workItem from="1618948855011" duration="5055000" />
+      <workItem from="1619033847873" duration="7960000" />
+      <workItem from="1619116803262" duration="11452000" />
     </task>
     <servers />
   </component>
@@ -115,14 +130,18 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="531" y="234" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.864@0.0.1536.864" timestamp="1618753851406" />
-    <state x="277" y="77" key="SettingsEditor" timestamp="1618867581884">
+    <state x="277" y="77" key="SettingsEditor" timestamp="1619088995552">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="277" y="77" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1618867581884" />
+    <state x="277" y="77" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1619088995552" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1618758066084">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1536.864@0.0.1536.864" timestamp="1618758066084" />
+    <state x="478" y="165" width="579" height="534" key="find.popup" timestamp="1619124665300">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="478" y="165" width="579" height="534" key="find.popup/0.0.1536.864@0.0.1536.864" timestamp="1619124665300" />
     <state x="425" y="197" key="run.anything.popup" timestamp="1618680415203">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
