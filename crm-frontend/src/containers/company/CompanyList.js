@@ -17,11 +17,15 @@ const CompanyList = () => {
     const fetchData = () => {
         dispatch(GetCompaniesList());
     }
-    const actionsBodyTemplate = (rowData) => {
-        return (<div>
+    const actionsDeleteBodyTemplate = (rowData) => {
+        return (
             <button onClick={() =>removeItem(rowData)}>Delete</button>
+        );
+    }
+    const actionsUpdateBodyTemplate = (rowData) => {
+        return (
             <button onClick={() =>updateItem(rowData)}>Update</button>
-        </div>);
+        );
     }
     const removeItem = (data) => {
         console.log(data);
@@ -33,12 +37,14 @@ const CompanyList = () => {
     const showData = () => {
         if (!_.isEmpty(companiesList.data)) {
             return (<div className="container-fluid datatable-responsive-demo ">
-                <DataTable  header="Companies List" resizableColumns columnResizeMode="fit" value={companiesList.data} className="p-datatable-striped p-datatable-gridlines p-datatable-responsive-demo">
+                <DataTable resizableColumns columnResizeMode="fit" value={companiesList.data} className="p-datatable-striped p-datatable-gridlines p-datatable-responsive-demo">
                     <Column field="id" header="ID" sortable></Column>
                     <Column field="name" header="Name" sortable></Column>
                     <Column field="country" header="Country" sortable></Column>
                     <Column field="adress" header="Adress" sortable></Column>
-                    <Column header="Action" body={actionsBodyTemplate}></Column>
+                    <Column header="Delete" body={actionsDeleteBodyTemplate}></Column>
+                    <Column header="Update" body={actionsUpdateBodyTemplate}></Column>
+
                 </DataTable>
             </div>)
         }

@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import 'primereact/resources/themes/bootstrap4-light-purple/theme.css';
 import 'primeicons/primeicons.css';
+import {PanelMenu} from 'primereact/panelmenu';
 
 import 'primeflex/primeflex.scss';
 import './App.scss';
@@ -24,43 +25,105 @@ function App() {
         document.getElementById("root").click();
     }
     const [visibleLeft, setVisibleLeft] = useState(false);
+    const items = [
+        {
+            label: 'Companies',
+            items: [
+                {
+                    label: 'List',
+                    command: () => {
+                        window.location = "/companies";
+                    }
+                },
+                {
+                    label: 'Add New',
+                    command: () => {
+                        window.location = "/companies/add";
+                    }
 
-        return (
+                }
+            ]
+        },
+        {
+            label: 'Contacts',
+            items: [
+                {
+                    label: 'List',
+                    command: () => {
+                        window.location = "/contacts";
+                    }
+
+                },
+                {
+                    label: 'Add New Contact',
+                    command: () => {
+                        window.location = "/contacts/add";
+                    }
+                },
+
+            ]
+        },
+        {
+            label: 'Items',
+            items: [
+                {
+                    label: 'List',
+                    command: () => {
+                        window.location = "/items";
+                    }
+
+                },
+                {
+                    label: 'Add New Item',
+                    command: () => {
+                        window.location = "/items/add";
+                    }
+
+                }
+
+            ]
+        },
+        {
+            label: 'Quotes',
+            items: [
+                {
+                    label: 'List',
+                },
+                {
+                    label: 'Generate New Quote',
+                }
+            ]
+        }
+    ];
+
+    return (
         <div className="App">
             <Navbar bg="#0c8da0" expand="lg">
-                { !visibleLeft ?
+                {!visibleLeft ?
 
-                <Button className="menuToggleBtn" onClick={(e) => setVisibleLeft(true)}>
-                    <i className="pi pi-bars" styleName="font-size: 2rem"></i>
-                </Button>
-            : <Button className="menuToggleBtn"  onClick={(e) => setVisibleLeft(false)}>
+                    <Button className="menuToggleBtn" onClick={(e) => setVisibleLeft(true)}>
+                        <i className="pi pi-bars" styleName="font-size: 2rem"></i>
+                    </Button>
+                    : <Button className="menuToggleBtn" onClick={(e) => setVisibleLeft(false)}>
                         <i className=" pi pi-times" styleName="font-size: 2rem"></i>
                     </Button>}
 
+                <div className="text-center text-white" style={{width: '100%'}}>
 
-
-                <NavLink to={'/'}>Dashboard
-                </NavLink>
+                    <NavLink className="text-white" to={'/'}>CRM
+                    </NavLink>
+                </div>
                 <Navbar.Toggle aria-controls="basic-navbar-nav"/>
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
-                        <NavDropdown title="Company" id="basic-nav-dropdown">
-                            <NavLink to={'/companies'}>List</NavLink>
-                            <NavLink to={'/companies/add'}>Add a Company</NavLink>
-                        </NavDropdown>
-                        <NavDropdown title="Contact" id="basic-nav-dropdown">
-                            <NavLink to={'/contacts'}>List</NavLink>
-                            <NavLink to={'/contacts/add'}>Add a Contact</NavLink>
-                        </NavDropdown>
-                        <NavDropdown title="Item" id="basic-nav-dropdown">
-                            <NavLink to={'/items'}>List</NavLink>
-                            <NavLink to={'/items/add'}>Add an Item</NavLink>
+                        <NavDropdown title="kjbeli@vermeg.com" id="basic-nav-dropdown">
+                            <NavLink to={'/logout'}>Logout</NavLink>
                         </NavDropdown>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
             <Sidebar visible={visibleLeft} onHide={() => setVisibleLeft(false)}>
-                Content
+                <PanelMenu model={items} style={{width: '100%'}}/>
             </Sidebar>
             <Switch>
                 <Route path={"/"} exact component={Dashboard}/>

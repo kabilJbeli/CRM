@@ -10,6 +10,7 @@ body{
       border:none;
       outline:none;
       box-shadow: none;
+      padding: 0;
     }
 
     button.p-sidebar-close.p-sidebar-icon.p-link {
@@ -36,7 +37,7 @@ body{
       justify-content: space-around;
       height: 50px;
       align-items: center;
-      background-color: #0c8da0;
+      background-color: #353a4e;
       margin-bottom: 15px;
       .dropdown-menu{
         display:flex;
@@ -106,8 +107,22 @@ body{
       position: relative;
       float: left;
       width: 15rem;
+      padding: 0;
       height: 100vh;
       top: -15px;
+    }
+    .nav-item.dropdown{
+      a{
+        color:#ffffff !important;
+      }
+      .dropdown-menu{
+        border-radius: 0px !important;
+        width: 100%;
+        a{
+          padding: 0.2em;
+          color: #001c20 !important;
+        }
+      }
     }
   }
 }
