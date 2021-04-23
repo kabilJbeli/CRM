@@ -4,6 +4,12 @@ body{
   margin: 0;
   padding: 0;
   .App {
+
+    button.btn {
+      cursor: pointer !important;
+      border-radius: inherit;
+      padding: .2em 1.2em;
+    }
     .menuToggleBtn,.menuToggleBtn:hover,.menuToggleBtn:focus{
       z-index: 999999999;
       background: transparent;
@@ -11,6 +17,7 @@ body{
       outline:none;
       box-shadow: none;
       padding: 0;
+      cursor: pointer;
     }
 
     button.p-sidebar-close.p-sidebar-icon.p-link {
@@ -58,6 +65,7 @@ body{
         border: none !important;
 
         button {
+          cursor: pointer !important;
           span {
             color: #000 !important;
           }

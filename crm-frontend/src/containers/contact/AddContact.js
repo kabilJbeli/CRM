@@ -3,42 +3,55 @@ import {InputText} from "primereact/inputtext";
 import {InputTextarea} from "primereact/inputtextarea";
 import {Button} from "primereact/button";
 import {useDispatch, useSelector} from "react-redux";
-import { Dropdown } from 'primereact/dropdown';
+import {Dropdown} from 'primereact/dropdown';
 import {GetCompaniesList} from "../../actions/CompanyActions";
+import Store from "../../store";
+
 const AddContact = (props) => {
     const dispatch = useDispatch();
-    const [companies, setCompanies] = useState([]);
+    const [companies, setCompanies] = useState([{
+        name: null,
+        code: null
+    }]);
     const [company, setCompany] = useState({});
-    const companiesList = useSelector(state => state.CompanyList);
-React.useEffect(()=>{
-    dispatch(GetCompaniesList());
-    fetchData();
-    const list=[];
+    var companiesList = useSelector(state => state.CompanyList);
 
-    console.log(companiesList.data);
-    companiesList.data.map(item=>{
-        let obj = new Object();
-        obj['name']=item.name;
-        obj['code']=item.id;
-        list.push(obj);
+    Store.subscribe(()=>{
+        if(Store.getState().CompanyList) {
+            companiesList = Store.getState().CompanyList;
+            const list = [];
+            if(companiesList.data) {
+                companiesList.data.map(item => {
+                    let obj = new Object();
+                    obj['name'] = item.name;
+                    obj['code'] = item.id;
+                    list.push(obj);
+                });
+                setCompanies(list);
+            }
+        }
     });
+    React.useEffect(() => {
+        fetchData();
 
-    setCompanies(list)
-},[])
+    }, [])
 
     const fetchData = () => {
         dispatch(GetCompaniesList());
     }
-    const [state,setState] = useState({contact: {
-            firstName:'',
+    const [state, setState] = useState({
+        contact: {
+            firstName: '',
             lastName: '',
-            email:'',
+            email: '',
             phone: '',
-            companyID:''
+            companyID: ''
 
-        }});
-    const InvokeSetState =(contact) => {
-        setState(contact)}
+        }
+    });
+    const InvokeSetState = (contact) => {
+        setState(contact)
+    }
     const handleFirstNameChanged = (event) => {
         // Extract the current value of the customer from state
         let contact = state.contact;
@@ -155,17 +168,17 @@ React.useEffect(()=>{
                         payload: response.data
                     }
                 );
-                contact.companyID='';
-                contact.firstName='';
-                contact.lastName='';
-                contact.phone='';
-                contact.email='';
+                contact.companyID = '';
+                contact.firstName = '';
+                contact.lastName = '';
+                contact.phone = '';
+                contact.email = '';
                 InvokeSetState({
                     contact: contact
                 });
             })
             .catch(error => {
-                this.setState({errorMessage: error.toString()});
+                InvokeSetState({contact: {errorMessage: error.toString()}});
                 console.error('There was an error!', error);
                 dispatch({
                     type: 'FAILED_WHILE_INVOKING_COMPANY_ADD_SERVICE'
@@ -175,39 +188,40 @@ React.useEffect(()=>{
 
     return (
         <div className="container-fluid">
-        <div className="p-fluid p-formgrid p-grid">
-            <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="name">First Name</label>
-                <InputText id="name" onChange={handleFirstNameChanged.bind(this)} value={state.contact.firstName}
-                           type="text"/>
-            </div>
-            <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="country">Last Name</label>
-                <InputText id="country" type="text" onChange={handleLastNameChanged.bind(this)}
-                           value={state.contact.lastName}/>
-            </div>
-            <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="address">Email</label>
-                <InputText id="address" type="text" onChange={handleEmailChanged.bind(this)} rows="4"
+            <div className="p-fluid p-formgrid p-grid">
+                <div className="p-field p-col-12 p-md-6">
+                    <label htmlFor="name">First Name</label>
+                    <InputText id="name" onChange={handleFirstNameChanged.bind(this)} value={state.contact.firstName}
+                               type="text"/>
+                </div>
+                <div className="p-field p-col-12 p-md-6">
+                    <label htmlFor="country">Last Name</label>
+                    <InputText id="country" type="text" onChange={handleLastNameChanged.bind(this)}
+                               value={state.contact.lastName}/>
+                </div>
+                <div className="p-field p-col-12 p-md-6">
+                    <label htmlFor="address">Email</label>
+                    <InputText id="address" type="text" onChange={handleEmailChanged.bind(this)} rows="4"
                                value={state.contact.email}/>
-            </div>
-            <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="zip">Phone</label>
-                <InputText id="zip" type="text" onChange={handlePhoneChanged.bind(this)}
-                           value={state.contact.phone}/>
-            </div>
-            <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="zip">Company</label>
-                <Dropdown optionLabel="name" optionValue="code" value={company} options={companies}
-                          onChange={handleCompanyChanged.bind(this)}
-                          placeholder="Select a Company"/>
+                </div>
+                <div className="p-field p-col-12 p-md-6">
+                    <label htmlFor="zip">Phone</label>
+                    <InputText id="zip" type="text" onChange={handlePhoneChanged.bind(this)}
+                               value={state.contact.phone}/>
+                </div>
+                <div className="p-field p-col-12 p-md-6">
+                    <label htmlFor="zip">Company</label>
+                    <Dropdown optionLabel="name" optionValue="code" value={company} options={companies}
+                              onChange={handleCompanyChanged.bind(this)}
+                              placeholder="Select a Company"/>
 
-            </div>
+                </div>
 
-            <div className="p-field p-col-12 p-md-12">
-                <Button label="Save" onClick={addContact.bind(this)} disabled={!state.contact.phone || !state.contact.firstName || !state.contact.lastName || !state.contact.email}/>
+                <div className="p-field p-col-12 p-md-12">
+                    <Button label="Save" onClick={addContact.bind(this)}
+                            disabled={!state.contact.phone || !state.contact.firstName || !state.contact.lastName || !state.contact.email}/>
+                </div>
             </div>
-        </div>
         </div>
     )
 }

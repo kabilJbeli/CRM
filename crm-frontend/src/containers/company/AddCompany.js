@@ -94,7 +94,8 @@ const AddCompany = (props) => {
         };
         dispatch({
             type: 'INVOKING_COMPANY_ADD_SERVICE'
-        })
+        });
+        let company = state.company;
         fetch('http://localhost:1337/company', requestOptions)
             .then(async response => {
                 const data = await response.json();
@@ -110,10 +111,15 @@ const AddCompany = (props) => {
                         payload: response.data
                     }
                 );
+                company.adress='';
+                company.country='';
+                company.name='';
+                company.zipcode='';
+                InvokeSetState({company:company});
 
             })
             .catch(error => {
-                this.setState({errorMessage: error.toString()});
+                InvokeSetState({company:{errorMessage: error.toString()}});
                 console.error('There was an error!', error);
                 dispatch({
                     type: 'FAILED_WHILE_INVOKING_COMPANY_ADD_SERVICE'

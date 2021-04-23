@@ -1,11 +1,12 @@
 import React from "react";
+import {useParams} from "react-router";
 
 const ModifyItem = (props) => {
+    let { id } = useParams();
 
     return (
-        <div>
-            {props.id}
-            Modify Item
+        <div className="container-fluid">
+        Modify Item {id}
         </div>
     )
 }

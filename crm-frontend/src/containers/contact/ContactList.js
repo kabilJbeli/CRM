@@ -8,6 +8,7 @@ import { Button } from 'primereact/button';
 import 'primeflex/primeflex.css';
 import {GetContactsList} from "../../actions/ContactActions";
 import {GetCompaniesList} from "../../actions/CompanyActions";
+import {Link} from "react-router-dom";
 
 const ContactList = () => {
     const [contacts, setContacts] = useState([]);
@@ -23,12 +24,53 @@ const ContactList = () => {
     }
     const actionsBodyTemplate = (rowData) => {
         return (<div>
-            <button onClick={() =>removeItem(rowData)}>Delete</button>
-            <button onClick={() =>updateItem(rowData)}>Update</button>
+            <button className="btn btn-outline-danger mr-2" onClick={() =>removeItem(rowData)}>Delete</button>
+            <Link to={`/contacts/modify/${rowData.id}`}>
+                <button className="btn btn-outline-info">Update</button>
+            </Link>
         </div>);
     }
+
+    const deleteContact = (item) => {
+
+        const requestOptions = {
+            method: 'DELETE',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(item)
+        };
+        dispatch({
+            type: 'INVOKING_COMPANY_ADD_SERVICE'
+        })
+        fetch('http://localhost:1337/contact', requestOptions)
+            .then(async response => {
+                const data = await response.json();
+
+                // check for error response
+                if (!response.ok) {
+                    // get error message from body or default to response status
+                    const error = (data && data.message) || response.status;
+                    return Promise.reject(error);
+                }
+                fetchData();
+                // Extract the value of the input element represented by `target`
+
+                // Update the customer object's first name
+
+                // Update the state object
+
+
+            })
+            .catch(error => {
+                this.setState({errorMessage: error.toString()});
+                console.error('There was an error!', error);
+                dispatch({
+                    type: 'FAILED_WHILE_INVOKING_COMPANY_ADD_SERVICE'
+                })
+            });
+    };
+
     const removeItem = (data) => {
-        console.log(data);
+        deleteContact(data);
     }
     const updateItem = (data) => {
         console.log(data);
@@ -37,7 +79,7 @@ const ContactList = () => {
     const showData = () => {
         if (!_.isEmpty(contactsList.data) || _.isEmpty(contactsList.data)) {
             return (<div className="container-fluid datatable-responsive-demo " >
-                <DataTable resizableColumns  columnResizeMode="fit" value={contactsList.data} className="p-datatable-striped p-datatable-gridlines p-datatable-responsive-demo">
+                <DataTable paginator rows={10} resizableColumns  columnResizeMode="fit" value={contactsList.data} className="p-datatable-striped p-datatable-gridlines p-datatable-responsive-demo">
                     <Column field="id" header="ID" sortable></Column>
                     <Column field="firstName" header="First Name" sortable></Column>
                     <Column field="lastName" header="Last Name" sortable></Column>
