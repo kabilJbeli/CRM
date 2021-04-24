@@ -3,6 +3,7 @@ import {InputText} from "primereact/inputtext";
 import {InputTextarea} from "primereact/inputtextarea";
 import {Button} from "primereact/button";
 import {useDispatch, useSelector} from "react-redux";
+import {Link} from "react-router-dom";
 
 const AddItem = (props) => {
     const dispatch = useDispatch();
@@ -131,6 +132,9 @@ InvokeSetState({item : item});
 
     return (
         <div className="container-fluid">
+            <Link to="/dashboard" className="btnDashboard">
+                <Button label="Back to Dashboard" icon="pi pi-chevron-left" className="btn btn-info" />
+            </Link>
 
             <div className="p-fluid p-formgrid p-grid">
                 <div className="p-field p-col-12 p-md-6">

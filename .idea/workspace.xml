@@ -20,9 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="21f4fbbd-7202-4c44-8596-a08c8f8a340d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/crm-frontend/src/actions/ItemActions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crm-frontend/src/reducers/ItemListReducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-backend/api/models/Quote.js" beforeDir="false" afterPath="$PROJECT_DIR$/crm-backend/api/models/Quote.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/crm-frontend/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crm-frontend/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/crm-frontend/src/App.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crm-frontend/src/containers/company/AddCompany.js" beforeDir="false" afterPath="$PROJECT_DIR$/crm-frontend/src/containers/company/AddCompany.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crm-frontend/src/containers/company/CompanyList.js" beforeDir="false" afterPath="$PROJECT_DIR$/crm-frontend/src/containers/company/CompanyList.js" afterDir="false" />
@@ -30,10 +30,10 @@
       <change beforePath="$PROJECT_DIR$/crm-frontend/src/containers/contact/AddContact.js" beforeDir="false" afterPath="$PROJECT_DIR$/crm-frontend/src/containers/contact/AddContact.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crm-frontend/src/containers/contact/ContactList.js" beforeDir="false" afterPath="$PROJECT_DIR$/crm-frontend/src/containers/contact/ContactList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crm-frontend/src/containers/contact/ModifyContact.js" beforeDir="false" afterPath="$PROJECT_DIR$/crm-frontend/src/containers/contact/ModifyContact.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-frontend/src/containers/dashboard/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/crm-frontend/src/containers/dashboard/Dashboard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crm-frontend/src/containers/item/AddItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/crm-frontend/src/containers/item/AddItem.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crm-frontend/src/containers/item/ItemList.js" beforeDir="false" afterPath="$PROJECT_DIR$/crm-frontend/src/containers/item/ItemList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crm-frontend/src/containers/item/ModifyItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/crm-frontend/src/containers/item/ModifyItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-frontend/src/reducers/RootReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/crm-frontend/src/reducers/RootReducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,6 +98,7 @@
       <workItem from="1619033847873" duration="7960000" />
       <workItem from="1619116803262" duration="11452000" />
       <workItem from="1619191299453" duration="10651000" />
+      <workItem from="1619263760686" duration="4323000" />
     </task>
     <servers />
   </component>

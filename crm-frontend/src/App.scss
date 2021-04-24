@@ -3,6 +3,38 @@
 body{
   margin: 0;
   padding: 0;
+  a.btnDashboard {
+    position: absolute;
+    top: 66px;
+  }
+  .nav-item.dropdown a {
+    padding: 0 !important;
+    min-width: 160px;
+  }
+  button.navbar-toggler {
+    display: none !important;
+  }
+  .dashboard-container{
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    align-items: end;
+    .row{
+      width: 100%;
+      justify-content: space-around;
+      flex-wrap: wrap;
+
+      .custom-box {
+        min-width: 20%;
+        padding: 50px;
+        background: #353a4e;
+        a {
+          color: #fff !important;
+        }
+      }
+    }
+  }
   .App {
 
     button.btn {
@@ -18,6 +50,7 @@ body{
       box-shadow: none;
       padding: 0;
       cursor: pointer;
+      min-width: 160px;
     }
 
     button.p-sidebar-close.p-sidebar-icon.p-link {

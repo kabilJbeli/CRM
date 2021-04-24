@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import 'primereact/resources/themes/bootstrap4-light-purple/theme.css';
+import 'primereact/resources/themes/bootstrap4-light-blue/theme.css';
 import 'primeicons/primeicons.css';
 import {PanelMenu} from 'primereact/panelmenu';
 
@@ -109,9 +109,7 @@ function App() {
                     </Button>}
 
                 <div className="text-center text-white" style={{width: '100%'}}>
-
-                    <NavLink className="text-white" to={'/'}>CRM
-                    </NavLink>
+                    Customer Relationship Management System
                 </div>
                 <Navbar.Toggle aria-controls="basic-navbar-nav"/>
                 <Navbar.Collapse id="basic-navbar-nav">

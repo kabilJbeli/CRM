@@ -16,7 +16,8 @@ module.exports = {
     reduction: "number",
     status: "string",
     clientID: {
-      model:'company'
+      model:'company',
+      required:true
     }
   },
   datastore: 'default',

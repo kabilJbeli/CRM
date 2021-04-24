@@ -3,6 +3,7 @@ import {InputText} from "primereact/inputtext";
 import {InputTextarea} from "primereact/inputtextarea";
 import {Button} from "primereact/button";
 import {useDispatch, useSelector} from "react-redux";
+import {Link} from "react-router-dom";
 
 const AddCompany = (props) => {
     const dispatch = useDispatch();
@@ -129,8 +130,11 @@ const AddCompany = (props) => {
 
     return (
         <div className="container-fluid">
+            <Link to="/dashboard" className="btnDashboard">
+                <Button label="Back to Dashboard" icon="pi pi-chevron-left" className="btn btn-info" />
+            </Link>
 
-        <div className="p-fluid p-formgrid p-grid">
+            <div className="p-fluid p-formgrid p-grid">
             <div className="p-field p-col-12 p-md-6">
                 <label htmlFor="name">Company Name</label>
                 <InputText id="name" onChange={handleNameChanged.bind(this)} value={state.company.name}
@@ -148,7 +152,7 @@ const AddCompany = (props) => {
             </div>
             <div className="p-field p-col-12 p-md-6">
                 <label htmlFor="zip">Zip</label>
-                <InputText id="zip" type="text" onChange={handleZipChanged.bind(this)}
+                <InputText id="zip" type="number" onChange={handleZipChanged.bind(this)}
                            value={state.company.zipcode}/>
             </div>
             <div className="p-field p-col-12 p-md-12">

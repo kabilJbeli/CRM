@@ -52,13 +52,6 @@ const ContactList = () => {
                     return Promise.reject(error);
                 }
                 fetchData();
-                // Extract the value of the input element represented by `target`
-
-                // Update the customer object's first name
-
-                // Update the state object
-
-
             })
             .catch(error => {
                 this.setState({errorMessage: error.toString()});
@@ -79,6 +72,9 @@ const ContactList = () => {
     const showData = () => {
         if (!_.isEmpty(contactsList.data) || _.isEmpty(contactsList.data)) {
             return (<div className="container-fluid datatable-responsive-demo " >
+                <Link to="/dashboard" className="btnDashboard">
+                    <Button label="Back to Dashboard" icon="pi pi-chevron-left" className="btn btn-info" />
+                </Link>
                 <DataTable paginator rows={10} resizableColumns  columnResizeMode="fit" value={contactsList.data} className="p-datatable-striped p-datatable-gridlines p-datatable-responsive-demo">
                     <Column field="id" header="ID" sortable></Column>
                     <Column field="firstName" header="First Name" sortable></Column>

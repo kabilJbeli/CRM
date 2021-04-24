@@ -6,6 +6,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {Dropdown} from 'primereact/dropdown';
 import {GetCompaniesList} from "../../actions/CompanyActions";
 import Store from "../../store";
+import {Link} from "react-router-dom";
 
 const AddContact = (props) => {
     const dispatch = useDispatch();
@@ -188,6 +189,10 @@ const AddContact = (props) => {
 
     return (
         <div className="container-fluid">
+            <Link to="/dashboard" className="btnDashboard">
+                <Button label="Back to Dashboard" icon="pi pi-chevron-left" className="btn btn-info" />
+            </Link>
+
             <div className="p-fluid p-formgrid p-grid">
                 <div className="p-field p-col-12 p-md-6">
                     <label htmlFor="name">First Name</label>
@@ -206,7 +211,7 @@ const AddContact = (props) => {
                 </div>
                 <div className="p-field p-col-12 p-md-6">
                     <label htmlFor="zip">Phone</label>
-                    <InputText id="zip" type="text" onChange={handlePhoneChanged.bind(this)}
+                    <InputText id="zip" type="number" onChange={handlePhoneChanged.bind(this)}
                                value={state.contact.phone}/>
                 </div>
                 <div className="p-field p-col-12 p-md-6">
