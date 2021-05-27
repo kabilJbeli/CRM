@@ -1,10 +1,14 @@
 import React from "react";
 import {Link} from "react-router-dom";
+import Menu from "../menu/Menu";
 
 const Dashboard = () => {
 
     return (
-        <div className="container-fluid dashboard-container">
+        <div>
+            <Menu/>
+
+            <div className="container-fluid dashboard-container">
             <div className="row">
                 <div className="custom-box text-center">
                     <Link to="/companies"> Companies</Link>
@@ -19,6 +23,7 @@ const Dashboard = () => {
                     <Link to="/quotes"> Quotes</Link>
                 </div>
             </div>
+        </div>
         </div>
     )
 }

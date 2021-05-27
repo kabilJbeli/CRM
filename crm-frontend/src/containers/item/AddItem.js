@@ -3,10 +3,13 @@ import {InputText} from "primereact/inputtext";
 import {InputTextarea} from "primereact/inputtextarea";
 import {Button} from "primereact/button";
 import {useDispatch, useSelector} from "react-redux";
-import {Link} from "react-router-dom";
+import {Link, useHistory} from "react-router-dom";
+import Menu from "../menu/Menu";
 
 const AddItem = (props) => {
     const dispatch = useDispatch();
+    const history = useHistory();
+
     const [state, setState] = useState({
         item: {
             name: '',
@@ -119,6 +122,7 @@ const AddItem = (props) => {
                 item.price='';
 InvokeSetState({item : item});
 
+                history.push('/items');
 
             })
             .catch(error => {
@@ -131,7 +135,10 @@ InvokeSetState({item : item});
     };
 
     return (
-        <div className="container-fluid">
+        <div>
+            <Menu/>
+
+            <div className="container-fluid">
             <Link to="/dashboard" className="btnDashboard">
                 <Button label="Back to Dashboard" icon="pi pi-chevron-left" className="btn btn-info" />
             </Link>
@@ -162,6 +169,7 @@ InvokeSetState({item : item});
                             disabled={!state.item.name || !state.item.quantity || !state.item.description || !state.item.price}/>
                 </div>
             </div>
+        </div>
         </div>
     )
 }

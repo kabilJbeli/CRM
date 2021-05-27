@@ -20,8 +20,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="21f4fbbd-7202-4c44-8596-a08c8f8a340d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/crm-frontend/src/actions/QuoteActions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-frontend/src/containers/SignIn/SignIn.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-frontend/src/containers/SignUp/SignUp.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-frontend/src/containers/menu/Menu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-frontend/src/containers/quote/AddQuote.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-frontend/src/containers/quote/ModifyQuote.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-frontend/src/containers/quote/QuoteList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-frontend/src/hooks/auth.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-frontend/src/images/CRM.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-frontend/src/reducers/QuoteListReducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-backend/api/models/Company.js" beforeDir="false" afterPath="$PROJECT_DIR$/crm-backend/api/models/Company.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-backend/api/models/Contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/crm-backend/api/models/Contact.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-backend/api/models/Item.js" beforeDir="false" afterPath="$PROJECT_DIR$/crm-backend/api/models/Item.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crm-backend/api/models/Quote.js" beforeDir="false" afterPath="$PROJECT_DIR$/crm-backend/api/models/Quote.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-backend/config/models.js" beforeDir="false" afterPath="$PROJECT_DIR$/crm-backend/config/models.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/crm-frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/crm-frontend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crm-frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/crm-frontend/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crm-frontend/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/crm-frontend/src/App.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crm-frontend/src/containers/company/AddCompany.js" beforeDir="false" afterPath="$PROJECT_DIR$/crm-frontend/src/containers/company/AddCompany.js" afterDir="false" />
@@ -34,6 +50,8 @@
       <change beforePath="$PROJECT_DIR$/crm-frontend/src/containers/item/AddItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/crm-frontend/src/containers/item/AddItem.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crm-frontend/src/containers/item/ItemList.js" beforeDir="false" afterPath="$PROJECT_DIR$/crm-frontend/src/containers/item/ItemList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crm-frontend/src/containers/item/ModifyItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/crm-frontend/src/containers/item/ModifyItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-frontend/src/reducers/RootReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/crm-frontend/src/reducers/RootReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,8 +96,19 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\kabil\Desktop\CRM\crm-frontend\src\images" />
       <recent name="C:\Users\kabil\Desktop\CRM\crm-frontend\src\containers\company" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="QuoteList.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/crm-frontend/src/containers/quote/QuoteList.js" working-dir="$PROJECT_DIR$/crm-frontend/src/containers/quote">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.QuoteList.js" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -98,7 +127,13 @@
       <workItem from="1619033847873" duration="7960000" />
       <workItem from="1619116803262" duration="11452000" />
       <workItem from="1619191299453" duration="10651000" />
-      <workItem from="1619263760686" duration="4323000" />
+      <workItem from="1619263760686" duration="6257000" />
+      <workItem from="1621035145517" duration="11921000" />
+      <workItem from="1621177477217" duration="1118000" />
+      <workItem from="1621275188584" duration="12807000" />
+      <workItem from="1621543733977" duration="4699000" />
+      <workItem from="1621766339959" duration="11531000" />
+      <workItem from="1622058647229" duration="20152000" />
     </task>
     <servers />
   </component>
@@ -126,6 +161,70 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="531" y="234" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.864@0.0.1536.864" timestamp="1618753851406" />
+    <state width="1515" height="277" key="GridCell.Tab.0.bottom" timestamp="1622140899875">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1515" height="277" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1622140899875" />
+    <state width="1515" height="277" key="GridCell.Tab.0.center" timestamp="1622140899875">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1515" height="277" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1622140899875" />
+    <state width="1515" height="277" key="GridCell.Tab.0.left" timestamp="1622140899875">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1515" height="277" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1622140899875" />
+    <state width="1515" height="277" key="GridCell.Tab.0.right" timestamp="1622140899875">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1515" height="277" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1622140899875" />
+    <state width="1515" height="277" key="GridCell.Tab.1.bottom" timestamp="1622140899876">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1515" height="277" key="GridCell.Tab.1.bottom/0.0.1536.864@0.0.1536.864" timestamp="1622140899876" />
+    <state width="1515" height="277" key="GridCell.Tab.1.center" timestamp="1622140899876">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1515" height="277" key="GridCell.Tab.1.center/0.0.1536.864@0.0.1536.864" timestamp="1622140899876" />
+    <state width="1515" height="277" key="GridCell.Tab.1.left" timestamp="1622140899876">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1515" height="277" key="GridCell.Tab.1.left/0.0.1536.864@0.0.1536.864" timestamp="1622140899876" />
+    <state width="1515" height="277" key="GridCell.Tab.1.right" timestamp="1622140899876">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1515" height="277" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1622140899876" />
+    <state width="1515" height="277" key="GridCell.Tab.2.bottom" timestamp="1622140899876">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1515" height="277" key="GridCell.Tab.2.bottom/0.0.1536.864@0.0.1536.864" timestamp="1622140899876" />
+    <state width="1515" height="277" key="GridCell.Tab.2.center" timestamp="1622140899876">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1515" height="277" key="GridCell.Tab.2.center/0.0.1536.864@0.0.1536.864" timestamp="1622140899876" />
+    <state width="1515" height="277" key="GridCell.Tab.2.left" timestamp="1622140899876">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1515" height="277" key="GridCell.Tab.2.left/0.0.1536.864@0.0.1536.864" timestamp="1622140899876" />
+    <state width="1515" height="277" key="GridCell.Tab.2.right" timestamp="1622140899876">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1515" height="277" key="GridCell.Tab.2.right/0.0.1536.864@0.0.1536.864" timestamp="1622140899876" />
+    <state width="1515" height="277" key="GridCell.Tab.3.bottom" timestamp="1622140899877">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1515" height="277" key="GridCell.Tab.3.bottom/0.0.1536.864@0.0.1536.864" timestamp="1622140899877" />
+    <state width="1515" height="277" key="GridCell.Tab.3.center" timestamp="1622140899876">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1515" height="277" key="GridCell.Tab.3.center/0.0.1536.864@0.0.1536.864" timestamp="1622140899876" />
+    <state width="1515" height="277" key="GridCell.Tab.3.left" timestamp="1622140899876">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1515" height="277" key="GridCell.Tab.3.left/0.0.1536.864@0.0.1536.864" timestamp="1622140899876" />
+    <state width="1515" height="277" key="GridCell.Tab.3.right" timestamp="1622140899877">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1515" height="277" key="GridCell.Tab.3.right/0.0.1536.864@0.0.1536.864" timestamp="1622140899877" />
     <state x="277" y="77" key="SettingsEditor" timestamp="1619088995552">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -134,10 +233,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1536.864@0.0.1536.864" timestamp="1618758066084" />
-    <state x="478" y="165" width="579" height="534" key="find.popup" timestamp="1619215380856">
+    <state x="473" y="115" width="756" height="598" key="find.popup" timestamp="1622069232399">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="478" y="165" width="579" height="534" key="find.popup/0.0.1536.864@0.0.1536.864" timestamp="1619215380856" />
+    <state x="473" y="115" width="756" height="598" key="find.popup/0.0.1536.864@0.0.1536.864" timestamp="1622069232399" />
     <state x="425" y="197" key="run.anything.popup" timestamp="1618680415203">
       <screen x="0" y="0" width="1536" height="864" />
     </state>

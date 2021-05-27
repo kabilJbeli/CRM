@@ -8,6 +8,7 @@ import "primereact/resources/primereact.css";
 import { Button } from 'primereact/button';
 import 'primeflex/primeflex.css';
 import {Link} from "react-router-dom";
+import Menu from "../menu/Menu";
 
 const CompanyList = (props) => {
     const dispatch = useDispatch();
@@ -73,7 +74,7 @@ const CompanyList = (props) => {
                 <Button label="Back to Dashboard" icon="pi pi-chevron-left" className="btn btn-info" />
                 </Link>
 
-                <DataTable paginator rows={10} resizableColumns columnResizeMode="fit" value={companiesList.data} className="p-datatable-striped p-datatable-gridlines p-datatable-responsive-demo">
+                <DataTable paginator rows={5} resizableColumns columnResizeMode="fit" value={companiesList.data} className="p-datatable-striped p-datatable-gridlines p-datatable-responsive-demo">
                     <Column field="id" header="ID" sortable></Column>
                     <Column field="name" header="Name" sortable></Column>
                     <Column field="country" header="Country" sortable></Column>
@@ -94,7 +95,9 @@ const CompanyList = (props) => {
 
     return (
         <div>
-            {showData()}
+                <Menu/>
+
+                {showData()}
         </div>
     )
 }

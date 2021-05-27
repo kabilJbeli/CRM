@@ -10,15 +10,13 @@ module.exports = {
   attributes: {
     id: {
       type: "number",
-      autoIncrement: true
+      autoIncrement:true
     },
     name: "string",
     description: "string",
     price: "number",
     quantity: "number",
-    quoteID: {
-      model:'quote'
-    }
+
   },
   datastore: 'default',
 };

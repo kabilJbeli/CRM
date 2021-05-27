@@ -1,5 +1,5 @@
 /**
- * Quote.js
+ * User.js
  *
  * @description :: A model definition represents a database table/collection.
  * @docs        :: https://sailsjs.com/docs/concepts/models-and-orm/models
@@ -12,17 +12,20 @@ module.exports = {
       type: "number",
       autoIncrement:true
     },
-    total: "number",
-    reduction: "number",
-    status: "string",
-    clientID: {
-      model:'company'
+    firstName:{
+      type: "string",
     },
-    items:{
-        collection:'item'
-      }
+    lastName: {
+      type: "string",
+    },
+    email: {
+      type: "string",
+    },
+    password: {
+      type: "string",
+    },
 
   },
-  datastore: 'default',
+
 };
 

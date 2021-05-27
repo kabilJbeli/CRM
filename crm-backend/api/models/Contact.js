@@ -7,10 +7,11 @@
 
 module.exports = {
 
-  attributes: {
+
+ attributes: {
     id: {
       type: "number",
-      autoIncrement: true
+      autoIncrement:true
     },
     firstName: "string",
     lastName: "string",
@@ -22,4 +23,3 @@ module.exports = {
   },
   datastore: 'default',
 };
-

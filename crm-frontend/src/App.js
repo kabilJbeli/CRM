@@ -9,7 +9,7 @@ import Dashboard from "./containers/dashboard/Dashboard";
 import CompanyList from "./containers/company/CompanyList";
 import AddCompany from "./containers/company/AddCompany";
 import ModifyCompany from "./containers/company/ModifyCompany";
-import {Switch, Route, Redirect, NavLink} from "react-router-dom";
+import {Switch, Route, Redirect, NavLink, BrowserRouter} from "react-router-dom";
 import {Navbar, Nav, NavDropdown} from 'react-bootstrap'
 import ContactList from "./containers/contact/ContactList";
 import AddContact from "./containers/contact/AddContact";
@@ -19,123 +19,103 @@ import AddItem from "./containers/item/AddItem";
 import ModifyItem from "./containers/item/ModifyItem";
 import {Sidebar} from 'primereact/sidebar';
 import {Button} from 'primereact/button';
+import QuoteList from "./containers/quote/QuoteList";
+import AddQuote from "./containers/quote/AddQuote";
+import ModifyQuote from "./containers/quote/ModifyQuote";
+import SignIn from "./containers/SignIn/SignIn";
+import SignUp from "./containers/SignUp/SignUp";
+import {ProvideAuth, useAuth} from "./hooks/auth";
 
 function App() {
     const componentDidUpdate = () => {
         document.getElementById("root").click();
     }
     const [visibleLeft, setVisibleLeft] = useState(false);
-    const items = [
-        {
-            label: 'Companies',
-            items: [
-                {
-                    label: 'List',
-                    command: () => {
-                        window.location = "/companies";
-                    }
-                },
-                {
-                    label: 'Add New',
-                    command: () => {
-                        window.location = "/companies/add";
-                    }
 
-                }
-            ]
-        },
-        {
-            label: 'Contacts',
-            items: [
-                {
-                    label: 'List',
-                    command: () => {
-                        window.location = "/contacts";
-                    }
 
-                },
-                {
-                    label: 'Add New Contact',
-                    command: () => {
-                        window.location = "/contacts/add";
-                    }
-                },
-
-            ]
-        },
-        {
-            label: 'Items',
-            items: [
-                {
-                    label: 'List',
-                    command: () => {
-                        window.location = "/items";
-                    }
-
-                },
-                {
-                    label: 'Add New Item',
-                    command: () => {
-                        window.location = "/items/add";
-                    }
-
-                }
-
-            ]
-        },
-        {
-            label: 'Quotes',
-            items: [
-                {
-                    label: 'List',
-                },
-                {
-                    label: 'Generate New Quote',
-                }
-            ]
-        }
-    ];
-
+    function PrivateRoute({ children, ...rest }) {
+        const auth = useAuth()
+        return (
+            <Route {...rest} render={({ location }) =>
+                auth.user ? (children) :
+                    (<Redirect to={{ pathname: '/sign-in', state: { from: location } }} />)
+            }
+            />
+        )
+    }
     return (
         <div className="App">
-            <Navbar bg="#0c8da0" expand="lg">
-                {!visibleLeft ?
 
-                    <Button className="menuToggleBtn" onClick={(e) => setVisibleLeft(true)}>
-                        <i className="pi pi-bars" styleName="font-size: 2rem"></i>
-                    </Button>
-                    : <Button className="menuToggleBtn" onClick={(e) => setVisibleLeft(false)}>
-                        <i className=" pi pi-times" styleName="font-size: 2rem"></i>
-                    </Button>}
+            <ProvideAuth>
+                <BrowserRouter>
+                    <Switch>
 
-                <div className="text-center text-white" style={{width: '100%'}}>
-                    Customer Relationship Management System
-                </div>
-                <Navbar.Toggle aria-controls="basic-navbar-nav"/>
-                <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="mr-auto">
-                        <NavDropdown title="kjbeli@vermeg.com" id="basic-nav-dropdown">
-                            <NavLink to={'/logout'}>Logout</NavLink>
-                        </NavDropdown>
-                    </Nav>
-                </Navbar.Collapse>
-            </Navbar>
-            <Sidebar visible={visibleLeft} onHide={() => setVisibleLeft(false)}>
-                <PanelMenu model={items} style={{width: '100%'}}/>
-            </Sidebar>
-            <Switch>
-                <Route path={"/"} exact component={Dashboard}/>
-                <Route path={"/companies"} exact component={CompanyList}/>
-                <Route path={"/companies/add"} exact component={AddCompany}/>
-                <Route path={"/companies/modify/:id"} exact component={ModifyCompany}/>
-                <Route path={"/contacts"} exact component={ContactList}/>
-                <Route path={"/contacts/add"} exact component={AddContact}/>
-                <Route path={"/contacts/modify/:id"} exact component={ModifyContact}/>
-                <Route path={"/items"} exact component={ItemList}/>
-                <Route path={"/items/add"} exact component={AddItem}/>
-                <Route path={"/items/modify/:id"} exact component={ModifyItem}/>
-                <Redirect to={"/"}/>
-            </Switch>
+                        <Route path={"/"} exact component={Dashboard}/>
+                        <Route path={"/companies"} exact component={CompanyList}/>
+                        <Route path={"/companies/add"} exact component={AddCompany}/>
+                        <Route path={"/companies/modify/:id"} exact component={ModifyCompany}/>
+                        <Route path={"/contacts"} exact component={ContactList}/>
+                        <Route path={"/contacts/add"} exact component={AddContact}/>
+                        <Route path={"/contacts/modify/:id"} exact component={ModifyContact}/>
+                        <Route path={"/items"} exact component={ItemList}/>
+                        <Route path={"/items/add"} exact component={AddItem}/>
+                        <Route path={"/items/modify/:id"} exact component={ModifyItem}/>
+                        <Route path={"/quotes"} exact component={QuoteList}/>
+                        <Route path={"/quotes/add"} exact component={AddQuote}/>
+                        <Route path={"/quotes/modify/:id"} exact component={ModifyQuote}/>
+
+                        <Route path={"/sign-in"} exact component={SignIn}/>
+                        <Route path={"/sign-up"} exact component={SignUp}/>
+                        <Redirect to={"/"}/>
+                        { /*
+
+                        <PrivateRoute path={"/dashboard"} exact >
+                            <Dashboard/>
+                        </PrivateRoute>
+                        <PrivateRoute  path={"/companies"} exact>
+                            <CompanyList/>
+                        </PrivateRoute>
+                        <PrivateRoute  path={"/companies/add"} exact >
+                            <AddCompany/>
+                        </PrivateRoute>
+                        <PrivateRoute  path={"/companies/modify/:id"} exact >
+                            <ModifyCompany/>
+                        </PrivateRoute>
+                        <PrivateRoute  path={"/contacts"} exact >
+                            <ContactList/>
+                        </PrivateRoute>
+
+                        <PrivateRoute  path={"/contacts/add"} exact >
+                            <AddContact/>
+                        </PrivateRoute>
+                        <PrivateRoute  path={"/contacts/modify/:id"} exact >
+                            <ModifyContact/>
+                        </PrivateRoute>
+                        <PrivateRoute  path={"/items"} exact >
+                            <ItemList/>
+                        </PrivateRoute>
+                        <PrivateRoute  path={"/items/add"} exact>
+                            <AddItem/>
+                        </PrivateRoute>
+                        <PrivateRoute  path={"/items/modify/:id"} exact>
+                            <ModifyItem/>
+                        </PrivateRoute>
+                        <PrivateRoute  path={"/quotes"} exact>
+                            <QuoteList/>
+                        </PrivateRoute>
+                        <PrivateRoute  path={"/quotes/add"} exact>
+                            <AddQuote/>
+                        </PrivateRoute>
+                        <PrivateRoute  path={"/quotes/modify/:id"} exact>
+                            <ModifyQuote/>
+                        </PrivateRoute>
+                                  <Redirect to={"/sign-in"}/>
+*/}
+
+
+                    </Switch>
+                </BrowserRouter>
+            </ProvideAuth>
         </div>
     );
 

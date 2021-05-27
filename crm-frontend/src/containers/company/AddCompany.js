@@ -3,10 +3,13 @@ import {InputText} from "primereact/inputtext";
 import {InputTextarea} from "primereact/inputtextarea";
 import {Button} from "primereact/button";
 import {useDispatch, useSelector} from "react-redux";
-import {Link} from "react-router-dom";
+import {Link, useHistory} from "react-router-dom";
+import Menu from "../menu/Menu";
+import {Sidebar} from "primereact/sidebar";
 
 const AddCompany = (props) => {
     const dispatch = useDispatch();
+
     const [state, setState] = useState({
         company: {
             name: '',
@@ -15,6 +18,7 @@ const AddCompany = (props) => {
             zipcode: ''
         }
     });
+    const history = useHistory();
 
     const InvokeSetState = (company) => {
         setState(company)
@@ -117,6 +121,7 @@ const AddCompany = (props) => {
                 company.name='';
                 company.zipcode='';
                 InvokeSetState({company:company});
+                history.push('/companies')
 
             })
             .catch(error => {
@@ -129,7 +134,10 @@ const AddCompany = (props) => {
     };
 
     return (
-        <div className="container-fluid">
+        <div>
+        <Menu/>
+
+    <div className="container-fluid">
             <Link to="/dashboard" className="btnDashboard">
                 <Button label="Back to Dashboard" icon="pi pi-chevron-left" className="btn btn-info" />
             </Link>
@@ -159,6 +167,7 @@ const AddCompany = (props) => {
                 <Button label="Save" onClick={addCompany.bind(this)}
                         disabled={!state.company.zipcode || !state.company.name || !state.company.country || !state.company.adress}/>
             </div>
+        </div>
         </div>
         </div>
     )

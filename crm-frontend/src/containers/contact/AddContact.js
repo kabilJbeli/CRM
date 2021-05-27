@@ -6,7 +6,8 @@ import {useDispatch, useSelector} from "react-redux";
 import {Dropdown} from 'primereact/dropdown';
 import {GetCompaniesList} from "../../actions/CompanyActions";
 import Store from "../../store";
-import {Link} from "react-router-dom";
+import {Link, useHistory} from "react-router-dom";
+import Menu from "../menu/Menu";
 
 const AddContact = (props) => {
     const dispatch = useDispatch();
@@ -16,6 +17,7 @@ const AddContact = (props) => {
     }]);
     const [company, setCompany] = useState({});
     var companiesList = useSelector(state => state.CompanyList);
+    const history = useHistory();
 
     Store.subscribe(()=>{
         if(Store.getState().CompanyList) {
@@ -177,6 +179,8 @@ const AddContact = (props) => {
                 InvokeSetState({
                     contact: contact
                 });
+                history.push('/contacts')
+
             })
             .catch(error => {
                 InvokeSetState({contact: {errorMessage: error.toString()}});
@@ -188,7 +192,10 @@ const AddContact = (props) => {
     };
 
     return (
-        <div className="container-fluid">
+        <div>
+            <Menu/>
+
+            <div className="container-fluid">
             <Link to="/dashboard" className="btnDashboard">
                 <Button label="Back to Dashboard" icon="pi pi-chevron-left" className="btn btn-info" />
             </Link>
@@ -227,6 +234,7 @@ const AddContact = (props) => {
                             disabled={!state.contact.phone || !state.contact.firstName || !state.contact.lastName || !state.contact.email}/>
                 </div>
             </div>
+        </div>
         </div>
     )
 }

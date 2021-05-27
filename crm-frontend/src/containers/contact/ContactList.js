@@ -9,6 +9,7 @@ import 'primeflex/primeflex.css';
 import {GetContactsList} from "../../actions/ContactActions";
 import {GetCompaniesList} from "../../actions/CompanyActions";
 import {Link} from "react-router-dom";
+import Menu from "../menu/Menu";
 
 const ContactList = () => {
     const [contacts, setContacts] = useState([]);
@@ -75,7 +76,7 @@ const ContactList = () => {
                 <Link to="/dashboard" className="btnDashboard">
                     <Button label="Back to Dashboard" icon="pi pi-chevron-left" className="btn btn-info" />
                 </Link>
-                <DataTable paginator rows={10} resizableColumns  columnResizeMode="fit" value={contactsList.data} className="p-datatable-striped p-datatable-gridlines p-datatable-responsive-demo">
+                <DataTable paginator rows={5} resizableColumns  columnResizeMode="fit" value={contactsList.data} className="p-datatable-striped p-datatable-gridlines p-datatable-responsive-demo">
                     <Column field="id" header="ID" sortable></Column>
                     <Column field="firstName" header="First Name" sortable></Column>
                     <Column field="lastName" header="Last Name" sortable></Column>
@@ -98,7 +99,9 @@ const ContactList = () => {
     }
     return (
         <div>
-            {showData()}
+                <Menu/>
+
+                {showData()}
         </div>
     )
 }
