@@ -234,14 +234,36 @@ margin-top:-1em;
 }
 .sign-in-header {
   display: flex;
-  height: 50px;
+  height: 45px;
   width: 100%;
   background: #353a4e;
-  margin-bottom: 15px;
   padding: 0.5rem 1rem;
-  color:#fff;
+  color: #fff;
   justify-content: center;
   align-items: center;
+  position: fixed;
+}
+
+.sign-up-content{
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items:center;
+  width: 500px;
+  background: transparent;
+  > div{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height:400px;
+    padding: 0px 100px;
+    * {
+      width:100% !important;
+    }
+  }
+
 }
 .sign-in-content{
   display:flex;
@@ -249,7 +271,7 @@ margin-top:-1em;
   flex-direction: column;
   align-items:center;
   width: 500px;
-  background: #fff;
+  background: transparent;
   > div{
     display: flex;
     justify-content: space-evenly;
@@ -257,10 +279,55 @@ margin-top:-1em;
     align-items: center;
     width: 100%;
     height: 250px;
-    padding: 0px 20px;
+    padding: 0px 100px;
      * {
        width:100% !important;
      }
   }
 
+}
+.sign-in-section{
+  display: flex;
+  width: 100%;
+  .description-section{
+    width: 50%;
+    height: 100vh;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    padding: 50px;
+  }
+  .sign-form-wrapper{
+    width: 50%;
+    height: 100vh;
+    background: url('./images/CRM.jpg')  no-repeat;
+    animation: gradientBG 20s ease-in-out infinite;
+    background-size: cover;
+    &:before{
+      content: '';
+      width: 50%;
+      height: 100%;
+      position: fixed;
+      background: #22273b;
+      opacity: 0.5;
+      z-index: 0;
+      top: 45px;
+    }
+    .sign-in-content,.sign-up-content{
+      z-index:1;
+      color:#ffffff;
+      width: 100%;
+    }
+  }
+}
+@keyframes gradientBG{
+  0%{
+    background-position:0% 50%;
+  }
+  50%{
+    background-position:100% 50%;
+  }
+  100%{
+    background-position:0% 50%;
+  }
 }

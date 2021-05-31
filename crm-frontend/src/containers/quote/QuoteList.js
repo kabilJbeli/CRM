@@ -30,17 +30,14 @@ const QuoteList = () => {
 
     const actionsBodyTemplate = (rowData) => {
         return (<div>
-                <button className="btn btn-outline-danger mr-2" disabled={rowData.status=='Validate' || rowData.status=='Refuse'} onClick={ () =>updateQuoteStatus(this,'Refuse',rowData.id)}>Refuse</button>
-                <button className="btn btn-outline-info" disabled={rowData.status=='Validate' || rowData.status=='Refuse'} onClick={ () => updateQuoteStatus(this,'Validate',rowData.id)}>Validate</button>
+                <button className="btn btn-outline-danger mr-2" disabled={rowData.status=='Validated' || rowData.status=='Denied'} onClick={ () =>updateQuoteStatus(this,'Denied',rowData.id)}>Deny</button>
+                <button className="btn btn-outline-info" disabled={rowData.status=='Validated' || rowData.status=='Denied'} onClick={ () => updateQuoteStatus(this,'Validated',rowData.id)}>Validate</button>
         </div>);
     }
 
     const showData = () => {
         if (!_.isEmpty(quotesList.data) || _.isEmpty(quotesList.data)) {
             return (<div className="container-fluid datatable-responsive-demo " >
-                <Link to="/dashboard" className="btnDashboard">
-                    <Button label="Back to Dashboard" icon="pi pi-chevron-left" className="btn btn-info" />
-                </Link>
                 <DataTable paginator rows={5} resizableColumns  columnResizeMode="fit" value={quotesList.data} className="p-datatable-striped p-datatable-gridlines p-datatable-responsive-demo">
                     <Column field="id" header="ID" sortable></Column>
                     <Column field="total" header="Total" sortable></Column>

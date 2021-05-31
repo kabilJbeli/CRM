@@ -25,31 +25,20 @@ import ModifyQuote from "./containers/quote/ModifyQuote";
 import SignIn from "./containers/SignIn/SignIn";
 import SignUp from "./containers/SignUp/SignUp";
 import {ProvideAuth, useAuth} from "./hooks/auth";
+import PrivateRoute from "./hooks/ProtectedRoute";
 
 function App() {
     const componentDidUpdate = () => {
         document.getElementById("root").click();
     }
     const [visibleLeft, setVisibleLeft] = useState(false);
-
-
-    function PrivateRoute({ children, ...rest }) {
-        const auth = useAuth()
-        return (
-            <Route {...rest} render={({ location }) =>
-                auth.user ? (children) :
-                    (<Redirect to={{ pathname: '/sign-in', state: { from: location } }} />)
-            }
-            />
-        )
-    }
     return (
         <div className="App">
 
             <ProvideAuth>
                 <BrowserRouter>
                     <Switch>
-
+                        { /*
                         <Route path={"/"} exact component={Dashboard}/>
                         <Route path={"/companies"} exact component={CompanyList}/>
                         <Route path={"/companies/add"} exact component={AddCompany}/>
@@ -67,7 +56,7 @@ function App() {
                         <Route path={"/sign-in"} exact component={SignIn}/>
                         <Route path={"/sign-up"} exact component={SignUp}/>
                         <Redirect to={"/"}/>
-                        { /*
+                      */}
 
                         <PrivateRoute path={"/dashboard"} exact >
                             <Dashboard/>
@@ -109,8 +98,10 @@ function App() {
                         <PrivateRoute  path={"/quotes/modify/:id"} exact>
                             <ModifyQuote/>
                         </PrivateRoute>
-                                  <Redirect to={"/sign-in"}/>
-*/}
+
+                        <Route path={"/sign-in"} exact component={SignIn}/>
+                        <Route path={"/sign-up"} exact component={SignUp}/>
+                        <Redirect to={"/sign-in"}/>
 
 
                     </Switch>

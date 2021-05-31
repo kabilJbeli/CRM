@@ -70,9 +70,6 @@ const ItemList = () => {
     const showData = () => {
         if (!_.isEmpty(itemsList.data) || _.isEmpty(itemsList.data) ) {
             return (<div className="container-fluid datatable-responsive-demo ">
-                <Link to="/dashboard" className="btnDashboard">
-                    <Button label="Back to Dashboard" icon="pi pi-chevron-left" className="btn btn-info" />
-                </Link>
                 <DataTable paginator rows={5} resizableColumns columnResizeMode="fit" value={itemsList.data} className="p-datatable-striped p-datatable-gridlines p-datatable-responsive-demo">
                     <Column field="id" header="ID" sortable></Column>
                     <Column field="name" header="Name" sortable></Column>

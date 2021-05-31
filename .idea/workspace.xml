@@ -20,38 +20,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="21f4fbbd-7202-4c44-8596-a08c8f8a340d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/crm-frontend/src/actions/QuoteActions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crm-frontend/src/containers/SignIn/SignIn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crm-frontend/src/containers/SignUp/SignUp.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crm-frontend/src/containers/menu/Menu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crm-frontend/src/containers/quote/AddQuote.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crm-frontend/src/containers/quote/ModifyQuote.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crm-frontend/src/containers/quote/QuoteList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crm-frontend/src/hooks/auth.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crm-frontend/src/images/CRM.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crm-frontend/src/reducers/QuoteListReducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-frontend/src/actions/SignInAction.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-frontend/src/hooks/ProtectedRoute.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-frontend/src/reducers/SignInReducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-backend/api/models/Company.js" beforeDir="false" afterPath="$PROJECT_DIR$/crm-backend/api/models/Company.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-backend/api/models/Contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/crm-backend/api/models/Contact.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-backend/api/models/Item.js" beforeDir="false" afterPath="$PROJECT_DIR$/crm-backend/api/models/Item.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-backend/api/models/Quote.js" beforeDir="false" afterPath="$PROJECT_DIR$/crm-backend/api/models/Quote.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-backend/config/models.js" beforeDir="false" afterPath="$PROJECT_DIR$/crm-backend/config/models.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crm-frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/crm-frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/crm-frontend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crm-frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/crm-frontend/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crm-frontend/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/crm-frontend/src/App.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-frontend/src/containers/SignIn/SignIn.js" beforeDir="false" afterPath="$PROJECT_DIR$/crm-frontend/src/containers/SignIn/SignIn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-frontend/src/containers/SignUp/SignUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/crm-frontend/src/containers/SignUp/SignUp.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crm-frontend/src/containers/company/AddCompany.js" beforeDir="false" afterPath="$PROJECT_DIR$/crm-frontend/src/containers/company/AddCompany.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crm-frontend/src/containers/company/CompanyList.js" beforeDir="false" afterPath="$PROJECT_DIR$/crm-frontend/src/containers/company/CompanyList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crm-frontend/src/containers/company/ModifyCompany.js" beforeDir="false" afterPath="$PROJECT_DIR$/crm-frontend/src/containers/company/ModifyCompany.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crm-frontend/src/containers/contact/AddContact.js" beforeDir="false" afterPath="$PROJECT_DIR$/crm-frontend/src/containers/contact/AddContact.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crm-frontend/src/containers/contact/ContactList.js" beforeDir="false" afterPath="$PROJECT_DIR$/crm-frontend/src/containers/contact/ContactList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crm-frontend/src/containers/contact/ModifyContact.js" beforeDir="false" afterPath="$PROJECT_DIR$/crm-frontend/src/containers/contact/ModifyContact.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-frontend/src/containers/dashboard/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/crm-frontend/src/containers/dashboard/Dashboard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crm-frontend/src/containers/item/AddItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/crm-frontend/src/containers/item/AddItem.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crm-frontend/src/containers/item/ItemList.js" beforeDir="false" afterPath="$PROJECT_DIR$/crm-frontend/src/containers/item/ItemList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crm-frontend/src/containers/item/ModifyItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/crm-frontend/src/containers/item/ModifyItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-frontend/src/containers/quote/AddQuote.js" beforeDir="false" afterPath="$PROJECT_DIR$/crm-frontend/src/containers/quote/AddQuote.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-frontend/src/containers/quote/QuoteList.js" beforeDir="false" afterPath="$PROJECT_DIR$/crm-frontend/src/containers/quote/QuoteList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-frontend/src/hooks/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/crm-frontend/src/hooks/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-frontend/src/images/CRM.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/crm-frontend/src/images/CRM.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crm-frontend/src/reducers/RootReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/crm-frontend/src/reducers/RootReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +58,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="2" />
   </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
@@ -134,6 +128,8 @@
       <workItem from="1621543733977" duration="4699000" />
       <workItem from="1621766339959" duration="11531000" />
       <workItem from="1622058647229" duration="20152000" />
+      <workItem from="1622233044453" duration="10262000" />
+      <workItem from="1622274219724" duration="3734000" />
     </task>
     <servers />
   </component>
@@ -233,10 +229,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1536.864@0.0.1536.864" timestamp="1618758066084" />
-    <state x="473" y="115" width="756" height="598" key="find.popup" timestamp="1622069232399">
+    <state x="473" y="115" width="756" height="598" key="find.popup" timestamp="1622240523385">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="473" y="115" width="756" height="598" key="find.popup/0.0.1536.864@0.0.1536.864" timestamp="1622069232399" />
+    <state x="473" y="115" width="756" height="598" key="find.popup/0.0.1536.864@0.0.1536.864" timestamp="1622240523385" />
     <state x="425" y="197" key="run.anything.popup" timestamp="1618680415203">
       <screen x="0" y="0" width="1536" height="864" />
     </state>

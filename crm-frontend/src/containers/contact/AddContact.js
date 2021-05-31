@@ -196,9 +196,6 @@ const AddContact = (props) => {
             <Menu/>
 
             <div className="container-fluid">
-            <Link to="/dashboard" className="btnDashboard">
-                <Button label="Back to Dashboard" icon="pi pi-chevron-left" className="btn btn-info" />
-            </Link>
 
             <div className="p-fluid p-formgrid p-grid">
                 <div className="p-field p-col-12 p-md-6">
@@ -226,7 +223,6 @@ const AddContact = (props) => {
                     <Dropdown optionLabel="name" optionValue="code" value={company} options={companies}
                               onChange={handleCompanyChanged.bind(this)}
                               placeholder="Select a Company"/>
-
                 </div>
 
                 <div className="p-field p-col-12 p-md-12">

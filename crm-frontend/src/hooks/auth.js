@@ -1,5 +1,9 @@
 import React, { useState, useEffect, useContext, createContext } from 'react'
 import axios from "axios";
+import {useDispatch} from "react-redux";
+import {SignInAction} from "../actions/SignInAction";
+import {useHistory} from "react-router-dom";
+import Dashboard from "../containers/dashboard/Dashboard";
 const authContext = createContext()
 export function ProvideAuth({ children }) {
     const auth = useProvideAuth()
@@ -8,16 +12,43 @@ export function ProvideAuth({ children }) {
 export const useAuth = () => useContext(authContext)
 
 function useProvideAuth() {
-    const [user, setUser] = useState(null)
-    const signin = (credentials) => {
-        axios.get(`http://localhost:1337/user?email=${credentials.email}&password=${credentials.password}`).then((res)=>{
-            setUser(res.data[0]);
-        });
+    const dispatch = useDispatch();
+    const history = useHistory();
 
+    let [user, setUser] = useState(null);
+    let  authenticated = false;
+
+    const signin = (credentials) => {
+        if(credentials) {
+            axios.get(`http://localhost:1337/user?email=${credentials.email}&password=${credentials.password}`).then((res) => {
+                user =res.data[0];
+                if (res.data[0]) {
+                    window.location='/dashboard';
+                } else {
+                    history.push('/');
+                }
+            });
+        }
     }
-    useEffect(() => {
-        //check authentication
-    }, [])
+
+
+  const  login=(cb) => {
+        this.authenticated = true;
+        cb();
+    }
+
+    const  logout =(cb) =>  {
+        this.authenticated = false;
+        cb();
+    }
+
+    const isAuthenticated =() => {
+        return this.authenticated;
+    }
+
+    React.useEffect(() => {
+    }, []);
+
     return {
         user,
         signin

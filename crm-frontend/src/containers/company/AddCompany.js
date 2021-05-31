@@ -138,11 +138,7 @@ const AddCompany = (props) => {
         <Menu/>
 
     <div className="container-fluid">
-            <Link to="/dashboard" className="btnDashboard">
-                <Button label="Back to Dashboard" icon="pi pi-chevron-left" className="btn btn-info" />
-            </Link>
-
-            <div className="p-fluid p-formgrid p-grid">
+                   <div className="p-fluid p-formgrid p-grid">
             <div className="p-field p-col-12 p-md-6">
                 <label htmlFor="name">Company Name</label>
                 <InputText id="name" onChange={handleNameChanged.bind(this)} value={state.company.name}
